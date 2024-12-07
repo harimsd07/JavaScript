@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working Example for With keyword</title>
+    <script>
+        function addPrice(amount){
+            with(this){
+                price=amount;
+            }
+        }
+        function book(title,author){
+            this.title=title;
+            this.author=author;
+            this.price=0;
+            this.addPrice=addPrice;
+        }
+    </script>
+</head>
+<body>
+    
+    
+    <script type="text/javascript">
+        var mybook=new book("The theory of Everything","Stephen");
+        mybook.addPrice(100);
+
+        document.write("<b>Book title is:</b>" + mybook.title+ " ");
+        document.write("<b>Book author is:</b>" + mybook.author + " ");
+        document.write("<b>Book price is:</b>" + mybook.price);
+    </script>
+</body>
+</html>

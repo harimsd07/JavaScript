@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Before the Element</title>
+    <script>
+        function insertingBefore(){
+            var newPara= document.createElement("p");
+            var newParaText=document.createTextNode("This is paragraph 2");
+            var myDiv= document.getElementById("div1");
+            var Para2 = document.getElementById("para2");
+            myDiv.insertBefore(newPara,para2)
+        }
+        window.onload=function(){
+            document.getElementById("btn").onclick=insertingBefore;
+        }
+    </script>
+</head>
+<body>
+    <div id="div1">
+        <p id="para1">This is paragraph 1</p>
+        <p id="para2"> This is paragraph 3</p>
+        <input type="button" id="btn" value="insertBefore">
+    </div>
+    
+</body>
+</html>

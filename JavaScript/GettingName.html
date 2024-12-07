@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Name</title>
+    <script>
+       function GettingName(personName)
+       {
+        this.name = personName;
+        this.info = "I am called " + this.name;
+        this.showInfo=function(){
+            alert(this.info);
+        }
+       }
+        var Person1=new GettingName("hari");
+        var Person2=new GettingName("Irah");
+        GettingName.prototype.sayHello=function(){
+            alert(this.name + "says hello")
+        }
+</script>
+</head>
+<body>
+    <input type="button" value="showInfo hari" onclick="Person1.showInfo()">
+    <input type="button" value="showInfo Irah" onclick="Person2.showInfo()">
+    <input type="button" value="say hello hari" onclick="Person1.sayHello()">
+    <input type="button" value="say hello Irah" onclick="Person2.sayHello()">
+    
+    
+</body>
+</html>

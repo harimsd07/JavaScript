@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Function using oop</title>
+    <script>
+        function myObjTest(){
+           this.info ="this is the information for the object testing";
+           this.showInfo=function(){
+            alert(this.info);
+            }
+            this.setInfo=function(newInfo){
+                this.info =newInfo;
+
+            }
+        }
+        var myobj1 = new myObjTest();
+        var myobj2 = new myObjTest();
+    </script>
+</head>
+<body>
+    <input type="button" value="showInfo 1" onclick="myobj1.showInfo()">
+    <input type="button" value="showInfo 2" onclick="myobj2.showInfo()">
+    <input type="button" value="setInfo " onclick="myobj2.setInfo('this is a new info')">
+    
+</body>
+</html>

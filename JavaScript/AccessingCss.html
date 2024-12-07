@@ -1,0 +1,20 @@
+<html>
+<head>
+<title> Coloring the element using getElementById</title>
+<style>
+#colorthetext{
+color:red;
+font-size:25px;
+}
+</style>
+</head>
+<body>
+<p id="colorthetext">This is the sentence for testing</p>
+<script>
+function changeColor(){
+document.getElementById("colorthetext").style.color="blue";
+}
+</script>
+<input type="button" onclick="changeColor()" value="change color">
+</body>
+</htm>

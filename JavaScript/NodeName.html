@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node test</title>
+
+</head>
+<body>
+    <h1>List to do :</h1>
+    <ol id="todo1">
+        <li>First one</li>
+        <li>Second one</li>
+        <li>Third one</li>
+    </ol>
+    <p id="todoNotes"> Make sure to complete the work ASAP</p>
+    <script>
+        function NodeName(){
+        var text = '';
+        var pElement = document.getElementById("todoNotes");
+        
+    alert(pElement.nodename );
+    }
+    window.onload = NodeName;
+    </script>
+    
+</body>
+</html>

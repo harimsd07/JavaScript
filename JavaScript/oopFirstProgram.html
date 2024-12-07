@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oop First program</title>
+    <script>
+        var myNewObject= new Object();
+        myNewObject.info = "This is the message from the object's property";
+        function MyFunc(){
+            alert(this.info);
+        }
+        myNewObject.showInfo=MyFunc;
+    </script>
+</head>
+<body>
+    <input type="button" value="myNewObject.showInfo" onclick="myNewObject.showInfo()" >
+    <input type="button" value="MyFunc" onclick="MyFunc()">
+    <input type="button" value="showInfo" onclick="showInfo()">
+</body>
+</html>

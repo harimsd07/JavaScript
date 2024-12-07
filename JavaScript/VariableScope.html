@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Scope</title>
+    <script>
+        var a=10;var b=20;
+        function variable(){
+           var a=25;
+           alert("Local variable 'a':" + a + "\n" +" Global variable 'b':" +b);           
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var message=variable();
+        alert("Global variable 'a':" + a);
+    </script>
+    
+</body>
+</html>

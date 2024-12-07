@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node test</title>
+
+</head>
+<body>
+    <h1>List to do :</h1>
+    <ol id="todo1">
+        <li>First one</li>
+        <li>Second one</li>
+        <li>Third one</li>
+    </ol>
+    <p id="todoNotes"> Make sure to complete the work ASAP</p>
+    <script>
+        function NodeValue(){
+        var text = '';
+        var pElement = document.getElementById("todoNotes");
+        for (var i=0; i < pElement.childNodes.length; i++) {
+        if(pElement.childNodes[i].nodeType == 3) {
+        text += pElement.childNodes[i].nodeValue;
+        };
+        }
+    alert("The paragraph says:\n\n" + text );
+    }
+    window.onload = NodeValue;
+    </script>
+    
+</body>
+</html>

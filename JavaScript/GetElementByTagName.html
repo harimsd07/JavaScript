@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Elements by TagName</title>
+
+</head>
+<body>
+<h1>The list to do :</h1>
+<ol id="todoList">
+    <li>The things to done at first step</li>
+    <li>The things to done at Second step</li>
+    <li>The things to done at Third step</li>
+</ol>
+<p id="todoNotes"> This should be done ASAP</p>
+<script>
+    function tagName(){
+        var OlElement = document.getElementById("todoList");
+        var listItems = OlElement.getElementsByTagName("li");
+        alert("the ordered list contains" + listItems.length + "" + "items" );
+    }
+    window.load =tagName();
+</script>
+</body>
+</html>

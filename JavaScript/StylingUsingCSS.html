@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling js using css</title>
+    <style>
+        span{
+            font-size: 18pt;
+            font-style: italic;
+            font-weight: bolder;
+            
+        }
+    </style>
+    <script>
+       function toggle(){
+        var a = document.getElementById("id1");
+        if(a.style.backgroundColor=="red"){
+            a.style.backgroundColor="blue";
+            a.style.color="white";
+        }
+        else{
+            a.style.backgroundColor="red";
+            a.style.color="white";
+        }
+       
+       }
+       window.onload = function(){
+            document.getElementById("btn1").onclick=toggle;        
+        }
+    </script>
+</head>
+<body>
+    <span id="id1">Welcome to the page</span>
+    <input type="button" id="btn1" value="Toggle">
+</body>
+</html>

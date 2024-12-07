@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title> Moving Object </title>
+    
+    <script> 
+    var context;
+    var x=250;
+    var y=250;
+    var counter =1;
+    
+    function pathCreate(){
+    context.beginPath();
+    context.fillStyle="#ff0000";
+    context.arc(x,y,15,0,Math.PI*2,false);
+    context.closePath();
+    context.fill();
+    }
+    
+    function moving(){
+    context.clearRect(0,0,400,300);
+    counter++;
+    x += 50*Math.cos(counter);
+    console.log(Math.cos(counter))
+    y += 50*Math.sin(counter);
+    console.log(Math.cos(counter))
+    pathCreate();
+    }
+    
+    window.onload=function(){
+     	context=canvas1.getContext("2d");
+     	setInterval(moving,100);
+     	}
+     	
+     </script>
+     </head>
+  <body>
+  <canvas id="canvas1" width="400" height="300">
+   		<p> Your Browser does not support canvas element </p>
+   </canvas>
+   </body>
+   </html>		
+    

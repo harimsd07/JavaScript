@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altering StyleSheets</title>
+    <style>
+        body {
+        background-color: white;color: red;
+        font: normal 24px arial, helvetica, sans-serif;
+        padding: 20px;
+        }
+        </style>
+        <style>
+        body {
+        background-color: black;
+        color: greenyellow;
+        font: italic bold 24px "Times New Roman", serif;
+        padding: 20px;
+        }
+        </style>
+    <script>
+        var stylesheet=0;
+        document.styleSheets[1].disabled=true;
+        function changeStyle(){
+            document.styleSheets[stylesheet].disabled=true;
+            stylesheet=(stylesheet==1) ? 0 : 1;
+            document.styleSheets[stylesheet].disabled=false;
+        }
+       window.onload=function(){
+        document.getElementById("btn1").onclick=changeStyle;
+       }
+       var sheet = document.styleSheets.length;
+       console.log(sheet)
+    </script>
+</head>
+<body>
+    Switching the stylesheet using the button below <br>
+    <input type="button" id="btn1" value="Toggle">
+</body>
+</html>

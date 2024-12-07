@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FunctionCall</title>
+
+    <script>
+        function myFunc(button_id,button_name,button_value){
+           var userName_id = "Button Id:" + button_id + "\n";
+           var userName_Name = "Button Name:" + button_name + "\n";
+           var userName_value = "Button Value:" + button_value + "\n";
+            alert(userName_id + userName_Name + userName_value);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" name="Left Hand Button" id="id1" value="Left" onclick="myFunc(this.id,this.name,this.value)">
+    <input type="button" name="Center Button" id="id2" value="Center" onclick="myFunc(this.id,this.name,this.value)">
+    <input type="button" name="Right Hand Button" id="id2" value="Right" onclick="myFunc(this.id,this.name,this.value)">
+</body>
+</html>

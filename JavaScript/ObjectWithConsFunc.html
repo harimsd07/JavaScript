@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects with constructor function</title>
+    <script>
+        function ConsWithObj(){
+            this.info ="This is the information from the function";
+            this.showInfo=function(){
+                alert(this.info);
+            }
+            this.setInfo= function(newInfo){
+                this.info=newInfo;
+                //alert(this.info);
+            }
+
+        }
+        var myNewObject1=new ConsWithObj();
+        var myNewObject2 = new ConsWithObj();
+    </script>
+</head>
+<body>
+    <input type="button" value="object1 showInfo" onclick="myNewObject1.showInfo()">
+    <input type="button" value="object2 showInfo" onclick="myNewObject2.showInfo()">
+    <input type="button" value="object setInfo" onclick="myNewObject2.setInfo('this is the new information')">
+    
+</body>
+</html>

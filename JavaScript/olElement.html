@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node test</title>
+
+</head>
+<body>
+    <h1>List to do :</h1>
+    <ol id="todo1">
+        <li>First one</li>
+        <li>Second one</li>
+        <li>Third one</li>
+    </ol>
+    <p id="todoNotes"> Make sure to complete the work ASAP</p>
+    <script>
+        function nodeTest(){
+            var olelement=document.getElementById("todo1");
+            var count =0;
+            for(var i=0; i<olelement.childNodes.length-1;i++){
+                if(olelement.childNodes[i].nodeType==1) count++;
+            }
+            alert("The ordered list contain "+ count + "items");
+        }
+        window.onload = nodeTest;
+    </script>
+    
+</body>
+</html>
